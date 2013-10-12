@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Manually start server after setting parent context. (init-method="start") -->
+<bean id="jettyServer"
+      class="org.eclipse.jetty.server.Server"
+      init-method="start"
+      destroy-method="stop">
+    <property name="threadPool">
+        <bean id="ThreadPool"
+              class="org.eclipse.jetty.util.thread.ExecutorThreadPool">
+            <constructor-arg value="0" />
+            <!--property name="corePoolSize" value="${jetty.server.thread.pool.core.pool.size}"/>
+            <property name="maximumPoolSize" value="${jetty.server.thread.pool.max.pool.size}"/-->
+        </bean>
+    </property>
+    <property name="connectors">
+        <list>
+            <bean id="Connector"
+                  class="org.eclipse.jetty.server.nio.SelectChannelConnector"
+                  p:port="${jetty.server.port}"
+                  p:maxIdleTime="${jetty.server.max.idle.time}"
+                  p:acceptors="${jetty.server.acceptor.num}"
+                  p:confidentialPort="${jetty.server.ssl.port}" />
+        </list>
+    </property>
+
+    <property name="handler">
+        <bean class="org.eclipse.jetty.server.handler.HandlerCollection">
+            <property name="handlers">
+                <list>
+                   <bean class="org.eclipse.jetty.servlet.ServletContextHandler">
+                      <property name="contextPath" value="/"/>
+                      <property name="sessionHandler">
+                        <bean class="org.eclipse.jetty.server.session.SessionHandler"/>
+                      </property>
+                      <property name="resourceBase" value="."/>
+                      <property name="servletHandler">
+                        <bean class="org.eclipse.jetty.servlet.ServletHandler">
+                          <property name="servlets"> <!-- servlet definition -->
+                            <list>
+                            <!-- default servlet -->
+                            <bean class="org.eclipse.jetty.servlet.ServletHolder">
+                              <property name="name" value="DefaultServlet"/>
+                              <property name="servlet">                                    
+                                  <bean class="org.springframework.web.servlet.DispatcherServlet"/>
+                              </property>
+                              <property name="initParameters">
+                                <map>                                        
+                                    <entry key="contextConfigLocation" value="classpath:config/DefaultServlet-servlet.xml" />
+                                </map>
+                              </property>
+                            </bean>
+                            </list>
+                          </property>
+                          <property name="servletMappings">
+                            <list><!-- servlet mapping -->
+                            <bean class="org.eclipse.jetty.servlet.ServletMapping">
+                              <property name="pathSpecs">
+                                <list><value>/</value></list>
+                              </property>
+                              <property name="servletName" value="DefaultServlet"/>
+                            </bean>
+                            </list>
+                          </property>
+                        </bean>
+                      </property>
+                    </bean>
+
+                    <bean class="org.eclipse.jetty.server.handler.RequestLogHandler">
+                        <property name="requestLog">
+                            <bean class="org.eclipse.jetty.server.NCSARequestLog">
+                                <constructor-arg value="${jetty.server.log.dir}/jetty-yyyy_mm_dd.log"/>
+                                <property name="extended" value="false"/>
+                            </bean>
+                        </property>
+                    </bean>
+                </list>
+            </property>
+        </bean>
+    </property>
+</bean>
