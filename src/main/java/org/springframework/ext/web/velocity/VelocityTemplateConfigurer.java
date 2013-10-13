@@ -21,7 +21,7 @@ import org.springframework.web.servlet.view.velocity.VelocityConfigurer;
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0
- * @since 2013年10月1日 下午5:52:22
+ * @since 2013年10月13日 上午10:04:10
  */
 public class VelocityTemplateConfigurer extends VelocityConfigurer implements ComponentConstants {
 	/** inputEncoding */

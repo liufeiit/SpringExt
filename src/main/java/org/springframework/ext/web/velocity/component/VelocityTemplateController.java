@@ -16,7 +16,7 @@ import org.apache.velocity.context.Context;
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0
- * @since 2013年10月1日 下午4:54:48
+ * @since 2013年10月13日 上午10:03:32
  */
 public class VelocityTemplateController implements TemplateController {
 	protected final Log log = LogFactory.getLog(getClass());

@@ -7,7 +7,7 @@ package org.springframework.ext.web.velocity.component;
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0
- * @since 2013年10月1日 下午4:51:17
+ * @since 2013年10月13日 上午10:03:02
  */
 public interface TemplateController extends Renderable {
 	/**

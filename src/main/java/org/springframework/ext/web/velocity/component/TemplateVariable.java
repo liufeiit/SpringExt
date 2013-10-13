@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0
- * @since 2013年10月1日 上午10:36:55
+ * @since 2013年10月13日 上午10:03:15
  */
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)

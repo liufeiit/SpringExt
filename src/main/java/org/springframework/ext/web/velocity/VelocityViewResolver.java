@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.AbstractUrlBasedView;
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0
- * @since 2013年9月28日 下午9:55:19
+ * @since 2013年10月13日 上午10:04:29
  */
 public class VelocityViewResolver extends AbstractTemplateViewResolver implements InitializingBean, ComponentConstants {
 	/** 编码 */

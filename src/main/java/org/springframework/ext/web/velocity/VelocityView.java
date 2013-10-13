@@ -27,7 +27,7 @@ import org.springframework.web.util.NestedServletException;
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0
- * @since 2013年9月28日 下午9:53:37
+ * @since 2013年10月13日 上午10:04:19
  */
 public class VelocityView extends AbstractTemplateView {
 	
