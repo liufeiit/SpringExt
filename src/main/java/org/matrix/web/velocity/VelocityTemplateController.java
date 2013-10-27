@@ -1,4 +1,4 @@
-package org.matrix.web.component;
+package org.matrix.web.velocity;
 
 import java.io.StringWriter;
 
@@ -9,7 +9,7 @@ import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.context.Context;
-import org.matrix.web.velocity.ComponentConstants;
+import org.matrix.web.component.TemplateController;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.InitializingBean;
