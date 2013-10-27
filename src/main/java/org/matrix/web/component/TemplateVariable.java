@@ -1,4 +1,4 @@
-package org.springframework.ext.web.velocity.component;
+package org.matrix.web.component;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package org.springframework.ext.web.velocity;
+package org.matrix.web.velocity;
 
 import java.io.File;
 

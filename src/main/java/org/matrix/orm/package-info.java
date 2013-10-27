@@ -2,6 +2,6 @@
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0
- * @since Oct 15, 2013 7:27:43 PM
+ * @since 2013年10月27日 下午7:25:29
  */
-package org.springframework.ext.orm;
+package org.matrix.orm;

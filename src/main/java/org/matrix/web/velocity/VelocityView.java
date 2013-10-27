@@ -1,4 +1,4 @@
-package org.springframework.ext.web.velocity;
+package org.matrix.web.velocity;
 
 import java.io.StringWriter;
 import java.util.Map;
@@ -11,12 +11,11 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.context.Context;
 import org.apache.velocity.exception.MethodInvocationException;
+import org.matrix.web.component.TemplateVariable;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContextException;
-import org.springframework.ext.web.velocity.component.TemplateVariable;
-import org.springframework.ext.web.velocity.component.VelocityTemplateController;
 import org.springframework.web.servlet.view.AbstractTemplateView;
 import org.springframework.web.servlet.view.velocity.VelocityConfig;
 import org.springframework.web.servlet.view.velocity.VelocityToolboxView;
@@ -30,11 +29,10 @@ import org.springframework.web.util.NestedServletException;
  * @since 2013年10月13日 上午10:04:19
  */
 public class VelocityView extends AbstractTemplateView {
-	
+	/** 模板编码格式 */
 	protected String encoding;
-
+	/** Velocity解析引擎 */
 	protected VelocityEngine velocityEngine;
-	
 	/** 模板文件的根路径目录 */
 	protected String templates = null;
 	/** screen模板解析的视图目录 */
@@ -56,52 +54,44 @@ public class VelocityView extends AbstractTemplateView {
 	protected void renderMergedTemplateModel(Map<String, Object> model, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		exposeHelpers(model, request);
-
 		Context velocityContext = createVelocityContext(model, request, response);
-		
 		Map<String, Object> templateVariables = getApplicationContext().getBeansWithAnnotation(TemplateVariable.class);
 		if (templateVariables != null && templateVariables.size() > 0) {
-			for (Map.Entry<String, Object> e : templateVariables.entrySet()) {// 注入自定义工具
+			for (Map.Entry<String, Object> e : templateVariables.entrySet()) {
+				// 注入自定义工具
 				String name = e.getKey();
 				Object tool = e.getValue();
-				if(tool == null) {
+				if (tool == null) {
 					continue;
-				}
-				if(VelocityTemplateController.class.isAssignableFrom(tool.getClass())) {
-					((VelocityTemplateController) tool).setContext(velocityContext);
-					((VelocityTemplateController) tool).setVelocityEngine(velocityEngine);
-					((VelocityTemplateController) tool).setEncoding(encoding);
-					((VelocityTemplateController) tool).setTemplates(templates);
 				}
 				velocityContext.put(name, tool);
 			}
 		}
-		
 		exposeHelpers(velocityContext, request, response);
-
 		doRender(velocityContext, response);
 	}
 	
 	protected void doRender(Context context, HttpServletResponse response) throws Exception {
 		if (logger.isDebugEnabled()) {
-			logger.debug("Rendering Velocity template [" + getUrl() + "] in VelocityView '" + getBeanName() + "', velocity '" + viewName + "'");
+			logger.debug("Rendering Velocity template [" + getUrl() + "] in VelocityView '" + getBeanName()
+					+ "', velocity '" + viewName + "'");
 		}
-		
+
 		Template screenTemplate = getTemplate(getUrl());
 		// 同名的layout
 		String layoutTemplateURL = templates + layout + viewName + suffix;
 		Template layoutTemplate = loadTemplate(layoutTemplateURL);
-		
+
 		if (layoutTemplate == null) {// 默认的layout
 			layoutTemplateURL = templates + layout + defaultLayoutTemplate;
 			layoutTemplate = loadTemplate(layoutTemplateURL);
 		}
-		
+
 		if (layoutTemplate == null) {// 没有找到layout就只解析screen
 			mergeTemplate(screenTemplate, context, response);
 			return;
 		}
-		
+
 		context.put(screenTemplateKey, templateRender(context, screenTemplate));
 		mergeTemplate(layoutTemplate, context, response);
 	}
@@ -122,7 +112,7 @@ public class VelocityView extends AbstractTemplateView {
 			template.merge(context, sw);
 			return sw.toString();
 		} catch (Exception e) {
-			if(logger.isErrorEnabled()) {
+			if (logger.isErrorEnabled()) {
 				logger.error(String.format("Template[%s] Render Error.", template.getName()), e);
 			}
 		}
@@ -157,9 +147,7 @@ public class VelocityView extends AbstractTemplateView {
 	 * @see org.apache.velocity.app.VelocityEngine#getTemplate
 	 */
 	protected Template getTemplate(String name) throws Exception {
-		return (encoding != null ?
-				velocityEngine.getTemplate(name, encoding) :
-				velocityEngine.getTemplate(name));
+		return (encoding != null ? velocityEngine.getTemplate(name, encoding) : velocityEngine.getTemplate(name));
 	}
 
 	/**
@@ -171,18 +159,14 @@ public class VelocityView extends AbstractTemplateView {
 	 * @throws Exception if thrown by Velocity
 	 * @see org.apache.velocity.Template#merge
 	 */
-	protected void mergeTemplate(
-			Template template, Context context, HttpServletResponse response) throws Exception {
+	protected void mergeTemplate(Template template, Context context, HttpServletResponse response) throws Exception {
 		try {
 			template.merge(context, response.getWriter());
-		}
-		catch (MethodInvocationException ex) {
+		} catch (MethodInvocationException ex) {
 			Throwable cause = ex.getWrappedThrowable();
-			throw new NestedServletException(
-					"Method invocation failed during rendering of Velocity view with name '" +
-					getBeanName() + "': " + ex.getMessage() + "; reference [" + ex.getReferenceName() +
-					"], method '" + ex.getMethodName() + "'",
-					cause==null ? ex : cause);
+			throw new NestedServletException("Method invocation failed during rendering of Velocity view with name '"
+					+ getBeanName() + "': " + ex.getMessage() + "; reference [" + ex.getReferenceName() + "], method '"
+					+ ex.getMethodName() + "'", cause == null ? ex : cause);
 		}
 	}
 	
@@ -209,15 +193,14 @@ public class VelocityView extends AbstractTemplateView {
 	 */
 	protected VelocityEngine autodetectVelocityEngine() throws BeansException {
 		try {
-			VelocityConfig velocityConfig = BeanFactoryUtils.beanOfTypeIncludingAncestors(
-					getApplicationContext(), VelocityConfig.class, true, false);
+			VelocityConfig velocityConfig = BeanFactoryUtils.beanOfTypeIncludingAncestors(getApplicationContext(),
+					VelocityConfig.class, true, false);
 			return velocityConfig.getVelocityEngine();
-		}
-		catch (NoSuchBeanDefinitionException ex) {
+		} catch (NoSuchBeanDefinitionException ex) {
 			throw new ApplicationContextException(
-					"Must define a single VelocityConfig bean in this web application context " +
-					"(may be inherited): VelocityConfigurer is the usual implementation. " +
-					"This bean may be given any name.", ex);
+					"Must define a single VelocityConfig bean in this web application context "
+							+ "(may be inherited): VelocityConfigurer is the usual implementation. "
+							+ "This bean may be given any name.", ex);
 		}
 	}
 	

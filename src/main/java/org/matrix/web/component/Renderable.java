@@ -1,4 +1,4 @@
-package org.springframework.ext.web.velocity.component;
+package org.matrix.web.component;
 
 /**
  * 表示该对象可以渲染。

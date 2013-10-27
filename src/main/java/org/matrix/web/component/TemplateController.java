@@ -1,9 +1,9 @@
-package org.springframework.ext.web.velocity.component;
+package org.matrix.web.component;
 
 /**
  * 自定义扩展的模板controller
  * <p>
- * 用于直接解析一个control模板。
+ * 用于直接解析并渲染一个模板，作为一个独立的可复用的模块。
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0

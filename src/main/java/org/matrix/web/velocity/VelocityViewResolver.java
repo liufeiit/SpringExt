@@ -1,4 +1,4 @@
-package org.springframework.ext.web.velocity;
+package org.matrix.web.velocity;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.http.MediaType;
@@ -44,17 +44,17 @@ public class VelocityViewResolver extends AbstractTemplateViewResolver implement
 	protected AbstractUrlBasedView buildView(String viewName) throws Exception {
 		VelocityView view = VelocityView.class.cast(super.buildView(viewName));
 		view.setViewName(viewName);
-		
+
 		view.setContentType(getContentType());
 		view.setEncoding(charset);
-		
+
 		view.setTemplates(templates);
 		view.setScreen(screen);
 		view.setLayout(layout);
 		view.setSuffix(getSuffix());
 		view.setScreenTemplateKey(screenTemplateKey);
 		view.setDefaultLayoutTemplate(defaultLayoutTemplate);
-		
+
 		return view;
 	}
 
@@ -74,17 +74,17 @@ public class VelocityViewResolver extends AbstractTemplateViewResolver implement
 		if (StringUtils.isEmpty(layout)) {
 			layout = DEFAULT_LAYOUT;
 		}
-		if (StringUtils.isEmpty(getSuffix())) {//默认配置
+		if (StringUtils.isEmpty(getSuffix())) {// 默认配置
 			setSuffix(DEFAULT_VELOCITY_SUFFIX);
 		}
-		if(StringUtils.isEmpty(charset)) {
+		if (StringUtils.isEmpty(charset)) {
 			charset = DEFAULT_CHARSET;
 		}
-		if(StringUtils.isEmpty(getContentType())) {
+		if (StringUtils.isEmpty(getContentType())) {
 			setContentType(MediaType.TEXT_HTML_VALUE + ";charset=" + charset);
 		}
 		// 设置prefix
-		setPrefix(SYSTEM_SEPARATOR + templates +  screen + SYSTEM_SEPARATOR);
+		setPrefix(SYSTEM_SEPARATOR + templates + screen + SYSTEM_SEPARATOR);
 		if (StringUtils.isEmpty(defaultLayoutTemplate)) {
 			defaultLayoutTemplate = DEFAULT_VELOCITY_LAYOUT_TEMPLATE;
 		}

@@ -1,4 +1,4 @@
-package org.springframework.ext.web.velocity.component;
+package org.matrix.web.component;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
