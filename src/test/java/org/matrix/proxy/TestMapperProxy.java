@@ -4,7 +4,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-import org.matrix.orm.annotations.Statement;
+import org.matrix.orm.annotations.Query;
 
 /**
  * 
@@ -16,7 +16,7 @@ public class TestMapperProxy implements InvocationHandler {
 
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		Statement statement = method.getAnnotation(Statement.class);
+		Query statement = method.getAnnotation(Query.class);
 		System.out.println("statement : " + statement.template());
 		Annotation[][] parametersAnnotations = method.getParameterAnnotations();
 		System.out.println("method : " + method);

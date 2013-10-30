@@ -1,7 +1,7 @@
 package org.matrix.proxy;
 
 import org.matrix.orm.annotations.Parameter;
-import org.matrix.orm.annotations.Statement;
+import org.matrix.orm.annotations.Query;
 
 /**
  * 
@@ -11,7 +11,7 @@ import org.matrix.orm.annotations.Statement;
  */
 public interface TestMapper {
 
-	@Statement(template="select * from usr;")
+	@Query(template="select * from usr;")
 	String getName(
 			@Parameter(name="firstName") String firstName, 
 			@Parameter(name="secondName") String secondName);
