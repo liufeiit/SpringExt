@@ -10,10 +10,6 @@ import jp.sourceforge.qrcode.QRCodeDecoder;
 import jp.sourceforge.qrcode.data.QRCodeImage;
 import jp.sourceforge.qrcode.exception.DecodingFailedException;
 
-/**
- * @blog http://sjsky.iteye.com
- * @author Michael
- */
 public class QRCodeDecoderHandler {
 
     /**

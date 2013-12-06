@@ -10,10 +10,6 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
-/**
- * @blog http://sjsky.iteye.com
- * @author Michael
- */
 public class ZxingEncoderHandler {
 
     /**

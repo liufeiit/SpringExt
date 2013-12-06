@@ -4,3 +4,17 @@ gradle setupBuild --type pom
 http://mvnrepository.com/
 
 http://code.google.com/p/zxing/downloads/list
+
+http://sjsky.iteye.com/blog/1136934
+
+<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>2.3.0</version>
+		</dependency>

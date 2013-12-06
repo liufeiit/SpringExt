@@ -7,10 +7,6 @@ import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 
-/**
- * @blog http://sjsky.iteye.com
- * @author Michael
- */
 public class ZxingEAN13EncoderHandler {
 
     /**
