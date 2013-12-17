@@ -41,11 +41,11 @@ public class ZxingEncoderHandler {
      * @param args
      */
     public static void main(String[] args) {
-        String imgPath = "/home/lf/tmp/michael_zxing.png";
-        String contents = "Hello Michael(大大),welcome to Zxing!"
-                + "\nMichael’s blog [ http://sjsky.iteye.com ]"
-                + "\nEMail [ sjsky007@gmail.com ]" + "\nTwitter [ @suncto ]";
-        int width = 300, height = 300;
+        String imgPath = "/home/lf/tmp/IOS.png";
+//        String contents = "老婆，你明天想吃什么饭？";
+//        String contents = "http://www.ruoogle.com.cn/nova/extend/showsuggestapp?ref=17";
+        String contents = "https://itunes.apple.com/cn/app/gan-liao-he-mo-sheng-ren-wan/id637378147?l=en";
+        int width = 500, height = 500;
         ZxingEncoderHandler handler = new ZxingEncoderHandler();
         handler.encode(contents, width, height, imgPath);
 

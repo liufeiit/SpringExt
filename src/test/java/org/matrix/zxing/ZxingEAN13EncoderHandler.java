@@ -39,7 +39,7 @@ public class ZxingEAN13EncoderHandler {
      * @param args
      */
     public static void main(String[] args) {
-        String imgPath = "/home/lf/tmp/zxing_EAN13.png";
+        String imgPath = "/home/lf/tmp/杨雪01.png";
         // 益达无糖口香糖的条形码
         String contents = "6923450657713";
 

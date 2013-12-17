@@ -80,11 +80,9 @@ public class QRCodeEncoderHandler {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String imgPath = "/home/lf/tmp/QRCode.png";
+        String imgPath = "/home/lf/tmp/杨雪.png";
 
-        String content = "Hello 大大、小小,welcome to QRCode!"
-                + "\nMyblog [ http://sjsky.iteye.com ]"
-                + "\nEMail [ sjsky007@gmail.com ]" + "\nTwitter [ @suncto ]";
+        String content = "老婆，你明天想吃什么饭？";
 
         QRCodeEncoderHandler handler = new QRCodeEncoderHandler();
         handler.encoderQRCode(content, imgPath);
