@@ -12,7 +12,7 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  * License for the specific language governing permissions and limitations under
  * the License.
- */
+ *//*
 package org.matrix.tess4j;
 
 import static org.junit.Assert.assertEquals;
@@ -61,9 +61,9 @@ public class TesseractTest {
     public void tearDown() {
     }
 
-    /**
+    *//**
      * Test of doOCR method, of class Tesseract.
-     */
+     *//*
     @Test
     public void testDoOCR_File() throws Exception {
         System.out.println("doOCR on a PNG image");
@@ -74,9 +74,9 @@ public class TesseractTest {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of doOCR method, of class Tesseract.
-     */
+     *//*
     @Test
     public void testDoOCR_File_Rectangle() throws Exception {
         System.out.println("doOCR on a BMP image with bounding rectangle");
@@ -88,9 +88,9 @@ public class TesseractTest {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of doOCR method, of class Tesseract.
-     */
+     *//*
     @Test
     public void testDoOCR_List_Rectangle() throws Exception {
         System.out.println("doOCR on a PDF document");
@@ -102,9 +102,9 @@ public class TesseractTest {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of doOCR method, of class Tesseract.
-     */
+     *//*
     @Test
     public void testDoOCR_BufferedImage() throws Exception {
         System.out.println("doOCR on a buffered image of a GIF");
@@ -116,9 +116,9 @@ public class TesseractTest {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of deskew algorithm.
-     */
+     *//*
     @Test
     public void testDoOCR_SkewedImage() throws Exception {
         System.out.println("doOCR on a skewed PNG image");
@@ -135,4 +135,4 @@ public class TesseractTest {
         System.out.println(result);
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
-}
+}*/

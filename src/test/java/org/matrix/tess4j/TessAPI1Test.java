@@ -12,7 +12,7 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  * License for the specific language governing permissions and limitations under
  * the License.
- */
+ *//*
 package org.matrix.tess4j;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -81,9 +81,9 @@ public class TessAPI1Test {
         TessAPI1.TessBaseAPIDelete(handle);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIRect method, of class TessDllAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIRect() throws Exception {
         System.out.println("TessBaseAPIRect");
@@ -103,9 +103,9 @@ public class TessAPI1Test {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIGetUTF8Text method, of class TessDllAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIGetUTF8Text() throws Exception {
         System.out.println("TessBaseAPIGetUTF8Text");
@@ -127,9 +127,9 @@ public class TessAPI1Test {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of TessVersion method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessVersion() {
         System.out.println("TessVersion");
@@ -139,9 +139,9 @@ public class TessAPI1Test {
         assertTrue(result.startsWith(expResult));
     }
 
-    /**
+    *//**
      * Test of TessBaseAPICreate method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPICreate() {
         System.out.println("TessBaseAPICreate");
@@ -150,9 +150,9 @@ public class TessAPI1Test {
         TessAPI1.TessBaseAPIDelete(handle);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIDelete method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIDelete() {
         System.out.println("TessBaseAPIDelete");
@@ -160,9 +160,9 @@ public class TessAPI1Test {
         TessAPI1.TessBaseAPIDelete(handle);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPISetInputName method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPISetInputName() {
         System.out.println("TessBaseAPISetInputName");
@@ -170,9 +170,9 @@ public class TessAPI1Test {
         TessAPI1.TessBaseAPISetInputName(handle, name);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPISetOutputName method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPISetOutputName() {
         System.out.println("TessBaseAPISetOutputName");
@@ -180,9 +180,9 @@ public class TessAPI1Test {
         TessAPI1.TessBaseAPISetOutputName(handle, name);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPISetVariable method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPISetVariable() {
         System.out.println("TessBaseAPISetVariable");
@@ -193,9 +193,9 @@ public class TessAPI1Test {
         assertEquals(expResult, result);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIGetBoolVariable method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIGetBoolVariable() {
         System.out.println("TessBaseAPIGetBoolVariable");
@@ -210,9 +210,9 @@ public class TessAPI1Test {
         assertEquals(expResult, result);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIPrintVariables method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIPrintVariablesToFile() throws Exception {
         System.out.println("TessBaseAPIPrintVariablesToFile");
@@ -234,9 +234,9 @@ public class TessAPI1Test {
         assertTrue(strB.toString().contains(var + "\t" + value));
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIInit1 method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIInit1() {
         System.out.println("TessBaseAPIInit1");
@@ -248,9 +248,9 @@ public class TessAPI1Test {
         assertEquals(expResult, result);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIInit2 method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIInit2() {
         System.out.println("TessBaseAPIInit2");
@@ -260,9 +260,9 @@ public class TessAPI1Test {
         assertEquals(expResult, result);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIInit3 method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIInit3() {
         System.out.println("TessBaseAPIInit3");
@@ -271,9 +271,9 @@ public class TessAPI1Test {
         assertEquals(expResult, result);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIGetInitLanguagesAsString method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIGetInitLanguagesAsString() {
         System.out.println("TessBaseAPIGetInitLanguagesAsString");
@@ -282,9 +282,9 @@ public class TessAPI1Test {
         assertEquals(expResult, result);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIGetLoadedLanguagesAsVector method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIGetLoadedLanguagesAsVector() {
         System.out.println("TessBaseAPIGetLoadedLanguagesAsVector");
@@ -294,9 +294,9 @@ public class TessAPI1Test {
         assertArrayEquals(expResult, result);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIGetAvailableLanguagesAsVector method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIGetAvailableLanguagesAsVector() {
         System.out.println("TessBaseAPIGetAvailableLanguagesAsVector");
@@ -306,9 +306,9 @@ public class TessAPI1Test {
         assertTrue(Arrays.asList(result).containsAll(Arrays.asList(expResult)));
     }
 
-    /**
+    *//**
      * Test of TessBaseAPISetPageSegMode method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPISetPageSegMode() {
         System.out.println("TessBaseAPISetPageSegMode");
@@ -316,9 +316,9 @@ public class TessAPI1Test {
         TessAPI1.TessBaseAPISetPageSegMode(handle, mode);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIGetPageSegMode method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIGetPageSegMode() {
         System.out.println("TessBaseAPIGetPageSegMode");
@@ -328,9 +328,9 @@ public class TessAPI1Test {
         assertEquals(expResult, result);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPISetImage method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPISetImage() {
         System.out.println("TessBaseAPISetImage");
@@ -342,9 +342,9 @@ public class TessAPI1Test {
         TessAPI1.TessBaseAPISetImage(handle, imagedata, width, height, bytes_per_pixel, bytes_per_line);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPISetRectangle method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPISetRectangle() {
         System.out.println("TessBaseAPISetRectangle");
@@ -355,9 +355,9 @@ public class TessAPI1Test {
         TessAPI1.TessBaseAPISetRectangle(handle, left, top, width, height);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIProcessPages method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIProcessPages() {
         System.out.println("TessBaseAPIProcessPages");
@@ -372,9 +372,9 @@ public class TessAPI1Test {
         assertTrue(result.startsWith(expResult));
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIGetHOCRText method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIGetHOCRText() throws Exception {
         System.out.println("TessBaseAPIGetHOCRText");
@@ -394,9 +394,9 @@ public class TessAPI1Test {
         assertTrue(result.contains("<div class='ocr_page'"));
     }
 
-    /**
+    *//**
      * Test of Orientation and script detection (OSD).
-     */
+     *//*
     @Test
     public void testOSD() throws Exception {
         System.out.println("OSD");
@@ -425,11 +425,11 @@ public class TessAPI1Test {
         }
     }
 
-    /**
+    *//**
      * Test of ResultIterator and PageIterator.
      *
      * @throws Exception
-     */
+     *//*
     @Test
     public void testResultIterator() throws Exception {
         System.out.println("TessBaseAPIGetIterator");
@@ -492,21 +492,22 @@ public class TessAPI1Test {
         assertTrue(true);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIClear method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIClear() {
         System.out.println("TessBaseAPIClear");
         TessAPI1.TessBaseAPIClear(handle);
     }
 
-    /**
+    *//**
      * Test of TessBaseAPIEnd method, of class TessAPI1.
-     */
+     *//*
     @Test
     public void testTessBaseAPIEnd() {
         System.out.println("TessBaseAPIEnd");
         TessAPI1.TessBaseAPIEnd(handle);
     }
 }
+*/

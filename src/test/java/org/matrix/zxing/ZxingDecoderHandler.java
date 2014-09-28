@@ -1,4 +1,4 @@
-package org.matrix.zxing;
+/*package org.matrix.zxing;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -16,10 +16,10 @@ import com.google.zxing.common.HybridBinarizer;
 
 public class ZxingDecoderHandler {
 
-    /**
+    *//**
      * @param imgPath
      * @return String
-     */
+     *//*
     public String decode(String imgPath) {
         BufferedImage image = null;
         Result result = null;
@@ -42,9 +42,9 @@ public class ZxingDecoderHandler {
         return null;
     }
 
-    /**
+    *//**
      * @param args
-     */
+     *//*
     public static void main(String[] args) {
         String imgPath = "/home/lf/tmp/michael_zxing.png";
         ZxingDecoderHandler handler = new ZxingDecoderHandler();
@@ -55,3 +55,4 @@ public class ZxingDecoderHandler {
 
     }
 }
+*/

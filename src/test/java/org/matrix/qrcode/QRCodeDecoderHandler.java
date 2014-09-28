@@ -1,4 +1,4 @@
-package org.matrix.qrcode;
+/*package org.matrix.qrcode;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -12,12 +12,12 @@ import jp.sourceforge.qrcode.exception.DecodingFailedException;
 
 public class QRCodeDecoderHandler {
 
-	/**
+	*//**
 	 * 解码二维码
 	 * 
 	 * @param imgPath
 	 * @return String
-	 */
+	 *//*
 	public String decoderQRCode(String imgPath) {
 
 		// QRCode 二维码图片的文件
@@ -47,10 +47,10 @@ public class QRCodeDecoderHandler {
 		return decodedData;
 	}
 
-	/**
+	*//**
 	 * @param args
 	 *            the command line arguments
-	 */
+	 *//*
 	public static void main0(String[] args) {
 		QRCodeDecoderHandler handler = new QRCodeDecoderHandler();
 		// String imgPath = "/home/lf/tmp/QRCode.png";
@@ -102,3 +102,4 @@ public class QRCodeDecoderHandler {
 
 	}
 }
+*/

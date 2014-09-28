@@ -12,7 +12,7 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  * License for the specific language governing permissions and limitations under
  * the License.
- */
+ *//*
 package org.matrix.tess4j;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -67,9 +67,9 @@ public class Tesseract1Test {
     public void tearDown() {
     }
 
-    /**
+    *//**
      * Test of doOCR method, of class Tesseract1.
-     */
+     *//*
     @Test
     public void testDoOCR_File() throws Exception {
         System.out.println("doOCR on a PNG image");
@@ -80,9 +80,9 @@ public class Tesseract1Test {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of doOCR method, of class Tesseract1.
-     */
+     *//*
     @Test
     public void testDoOCR_File_Rectangle() throws Exception {
         System.out.println("doOCR on a BMP image with bounding rectangle");
@@ -94,9 +94,9 @@ public class Tesseract1Test {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of doOCR method, of class Tesseract1.
-     */
+     *//*
     @Test
     public void testDoOCR_List_Rectangle() throws Exception {
         System.out.println("doOCR on a PDF document");
@@ -108,9 +108,9 @@ public class Tesseract1Test {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of doOCR method, of class Tesseract1.
-     */
+     *//*
     @Test
     public void testDoOCR_BufferedImage() throws Exception {
         System.out.println("doOCR on a buffered image of a GIF");
@@ -122,9 +122,9 @@ public class Tesseract1Test {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of deskew algorithm.
-     */
+     *//*
     @Test
     public void testDoOCR_SkewedImage() throws Exception {
         System.out.println("doOCR on a skewed PNG image");
@@ -142,9 +142,9 @@ public class Tesseract1Test {
         assertEquals(expResult, result.substring(0, expResult.length()));
     }
 
-    /**
+    *//**
      * Test of extending Tesseract1.
-     */
+     *//*
     @Test
     public void testExtendingTesseract1() throws Exception {
         System.out.println("Extends Tesseract1");
@@ -224,23 +224,23 @@ public class Tesseract1Test {
             this.rect = rect;
         }
 
-        /**
+        *//**
          * @return the text
-         */
+         *//*
         public String getText() {
             return text;
         }
 
-        /**
+        *//**
          * @return the confidence
-         */
+         *//*
         public float getConfidence() {
             return confidence;
         }
 
-        /**
+        *//**
          * @return the bounding box
-         */
+         *//*
         public Rectangle getRect() {
             return rect;
         }
@@ -250,4 +250,4 @@ public class Tesseract1Test {
             return String.format("%s\t[Confidence: %f Bounding box: %d %d %d %d]", text, confidence, rect.x, rect.y, rect.width, rect.height);
         }        
     }
-}
+}*/

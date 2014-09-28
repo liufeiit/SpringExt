@@ -1,4 +1,4 @@
-package org.matrix.tess4j;
+/*package org.matrix.tess4j;
 
 import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
@@ -19,12 +19,12 @@ import net.sourceforge.tess4j.Tesseract;
 import com.sun.media.imageioimpl.stream.ChannelImageInputStreamSpi;
 import com.sun.media.imageioimpl.stream.ChannelImageOutputStreamSpi;
 
-/**
+*//**
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0
  * @since 2013-12-16 下午3:07:55
- */
+ *//*
 public class TessTester {
 
 	private static void loadDLL(String libFullName) {
@@ -101,3 +101,4 @@ public class TessTester {
         System.out.println(result);
 	}
 }
+*/

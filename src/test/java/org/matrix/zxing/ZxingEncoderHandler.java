@@ -1,4 +1,4 @@
-package org.matrix.zxing;
+/*package org.matrix.zxing;
 
 import java.io.File;
 import java.util.Hashtable;
@@ -12,13 +12,13 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class ZxingEncoderHandler {
 
-    /**
+    *//**
      * 编码
      * @param contents
      * @param width
      * @param height
      * @param imgPath
-     */
+     *//*
     public void encode(String contents, int width, int height, String imgPath) {
         Hashtable<Object, Object> hints = new Hashtable<Object, Object>();
         // 指定纠错等级
@@ -37,9 +37,9 @@ public class ZxingEncoderHandler {
         }
     }
 
-    /**
+    *//**
      * @param args
-     */
+     *//*
     public static void main(String[] args) {
         String imgPath = "/home/lf/tmp/IOS.png";
 //        String contents = "老婆，你明天想吃什么饭？";
@@ -51,4 +51,4 @@ public class ZxingEncoderHandler {
 
         System.out.println("Michael ,you have finished zxing encode.");
     }
-}
+}*/

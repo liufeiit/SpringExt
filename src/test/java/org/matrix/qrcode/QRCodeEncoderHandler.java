@@ -1,4 +1,4 @@
-package org.matrix.qrcode;
+/*package org.matrix.qrcode;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -9,20 +9,20 @@ import javax.imageio.ImageIO;
 
 import com.swetake.util.Qrcode;
 
-/**
+*//**
  * 二维码生成器
  * 
  * @author 刘飞 E-mail:liufei_it@126.com
  * @version 1.0
  * @since 2013-12-6 上午10:00:18
- */
+ *//*
 public class QRCodeEncoderHandler {
 
-    /**
+    *//**
      * 生成二维码(QRCode)图片
      * @param content
      * @param imgPath
-     */
+     *//*
     public void encoderQRCode(String content, String imgPath) {
         try {
 
@@ -76,9 +76,9 @@ public class QRCodeEncoderHandler {
 
     }
 
-    /**
+    *//**
      * @param args the command line arguments
-     */
+     *//*
     public static void main(String[] args) {
         String imgPath = "/home/lf/tmp/杨雪.png";
 
@@ -89,4 +89,4 @@ public class QRCodeEncoderHandler {
 
         System.out.println("encoder QRcode success");
     }
-}
+}*/

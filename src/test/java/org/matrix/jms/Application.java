@@ -55,7 +55,8 @@ public class Application {
         MessageCreator messageCreator = new MessageCreator() {
                     @Override
                     public Message createMessage(Session session) throws JMSException {
-                        return session.createTextMessage("ping!");
+						return null;
+                        //return session.createTextMessage("ping!");
                     }
                 };
         JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
