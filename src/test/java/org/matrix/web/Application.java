@@ -1,4 +1,4 @@
-package org.matrix.web;
+/*package org.matrix.web;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.SpringApplication;
@@ -13,3 +13,4 @@ public class Application {
     }
 
 }
+*/

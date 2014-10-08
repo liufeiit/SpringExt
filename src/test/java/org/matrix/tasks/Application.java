@@ -1,4 +1,4 @@
-package org.matrix.tasks;
+/*package org.matrix.tasks;
 
 import org.springframework.boot.SpringApplication;
 
@@ -8,3 +8,4 @@ public class Application {
         SpringApplication.run(ScheduledTasks.class);
     }
 }
+*/

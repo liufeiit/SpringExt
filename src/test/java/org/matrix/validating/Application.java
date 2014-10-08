@@ -1,4 +1,4 @@
-package org.matrix.validating;
+/*package org.matrix.validating;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.SpringApplication;
@@ -41,3 +41,4 @@ public class Application {
     }
     
 }
+*/
